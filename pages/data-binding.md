@@ -5,7 +5,7 @@
 예를 들어, HTML에서 서버나 자바스크립트에서 받아온 데이터로 `동적으로 구성 요소를 변경`해주는 기능을 의미한다.
 
 ```tsx
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback } from "pages/react/react";
 
 interface DataType {
   id: number;
@@ -15,7 +15,7 @@ interface DataType {
 
 const DataBinding = () => {
   const [data, setData] = useState<DataType>({ id: 0, title: "", url: "" });
-  
+
   const onHandleNewDataFetching = useCallback(() => {
     setData({
       id: 1,
@@ -23,12 +23,12 @@ const DataBinding = () => {
       url: "www.google.co.kr"
     })
   }, []);
-  
+
   return (
     <div>
       <span>{data.id}</span>
       <span>{data.title}</span>
-      <img src={data.url} alt={"img"} />
+      <img src={data.url} alt={"img"}/>
       <button onClick={onHandleNewDataFetching}>데이터 변경하기</button>
     </div>
   )
