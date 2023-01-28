@@ -36,8 +36,10 @@
 
 <br />
 
+* Promise 객체는 비동기 작업이 어떤 결과를 반환하냐에 따른 값을 콜백 형태로 구성합니다.
 * `return value`를 사용할 수 있다.
 * `error handling(try, catch)` 방식이 동기식과 유사함.
+* `대기(pending)`, `이행(fulfilled)`, `거부(rejected)` 단계로 나뉨.
 
 ```javascript
 function getData() {
